@@ -17,8 +17,8 @@ public class FrontendService {
     }
 
     public int calculate(int leftNumber, int rightNumber) {
-        log.info("Calculating: {} + {}", leftNumber, rightNumber);
-        return leftNumber + rightNumber;
+        log.info("Calculating: {} - {}", leftNumber, rightNumber);
+        return leftNumber - rightNumber;
     }
 
     public void storeNewMessage(String message) {
