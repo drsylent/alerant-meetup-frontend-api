@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "b4444e7c-858a-46ae-8421-ef7557f8771e",
+		"name": "Alerant meetup Frontend API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/frontend/test?leftNumber=1&rightNumber=2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"frontend",
+						"test"
+					],
+					"query": [
+						{
+							"key": "leftNumber",
+							"value": "1"
+						},
+						{
+							"key": "rightNumber",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Hello Cloud-Natve!\",\r\n    \"leftNumber\": 1,\r\n    \"rightNumber\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/frontend/local",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"frontend",
+						"local"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DB Store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Hello!\",\r\n    \"leftNumber\": 1,\r\n    \"rightNumber\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/frontend/store",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"frontend",
+						"store"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8082",
+			"type": "default"
+		}
+	]
+}
