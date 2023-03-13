@@ -36,5 +36,5 @@ jobs:
         action: deploy
         service-name: alerant-meetup
         app-name: frontend
-        use-staging-deployment: true
+        deployment-name: other
         package: ${{ env.ASC_PACKAGE_PATH }}/**/*.jar
