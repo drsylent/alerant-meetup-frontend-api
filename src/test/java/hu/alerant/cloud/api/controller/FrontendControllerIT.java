@@ -42,7 +42,7 @@ class FrontendControllerIT {
                 .andExpect(MockMvcResultMatchers.content()
                         .contentTypeCompatibleWith(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.recentMessages[0]").value(""))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.result").value(1+2));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.result").value(1-2));
     }
 
     @Test
@@ -52,7 +52,7 @@ class FrontendControllerIT {
                 .andExpect(MockMvcResultMatchers.content()
                         .contentTypeCompatibleWith(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.recentMessages[0]").value("test5"))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.result").value(1+2));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.result").value(1-2));
     }
 
     @Test
@@ -66,7 +66,7 @@ class FrontendControllerIT {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.recentMessages[2]").value("test3"))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.recentMessages[3]").value("test2"))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.recentMessages[4]").value("test1"))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.result").value(1+2));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.result").value(1-2));
     }
 
     private String loadRequestJson() throws IOException {

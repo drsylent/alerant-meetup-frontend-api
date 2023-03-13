@@ -18,7 +18,7 @@ class FrontendServiceTest {
     void calculate() {
         int result = service.calculate(1, 1);
 
-        MatcherAssert.assertThat(result, Matchers.is(2));
+        MatcherAssert.assertThat(result, Matchers.is(0));
     }
 
     @Test
