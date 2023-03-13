@@ -33,8 +33,8 @@ jobs:
       uses: azure/spring-apps-deploy@v1
       with:
         azure-subscription: ${{ env.AZURE_SUBSCRIPTION }}
-        action: Deploy
+        action: deploy
         service-name: alerant-meetup
         app-name: frontend
-        deployment-name: staging
+        use-staging-deployment: true
         package: ${{ env.ASC_PACKAGE_PATH }}/**/*.jar
