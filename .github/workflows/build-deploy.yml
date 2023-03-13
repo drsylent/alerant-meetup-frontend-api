@@ -30,7 +30,7 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Deploy to staging with artifact
-      uses: azure/spring-cloud-deploy@v1
+      uses: azure/spring-apps-deploy@v1
       with:
         azure-subscription: ${{ env.AZURE_SUBSCRIPTION }}
         action: Deploy
